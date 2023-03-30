@@ -1,0 +1,52 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notes App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <nav>
+            <div style="display: flex; justify-content: space-evenly;">
+                <img src="https://cdn-icons-png.flaticon.com/512/9055/9055514.png" width="50px">
+                <a href="{{ url_for('home') }}" class="logo">My Notes App</a>
+            </div>
+            <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('insert') }}">Insert</a></li>
+            <li><a href="{{ url_for('delete') }}">Delete</a></li>
+            <li><a href="{{ url_for('display') }}">Display</a></li>
+            </ul>
+            <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+        </nav>
+        <br><br><br>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height:50vh;">
+            <h1>Add a Note</h1><br>
+            <form method="POST">
+                <textarea type="text" name="note" rows="10" cols = "50" placeholder="Enter a note"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <center>
+            <form method="GET" action="{{ url_for('display') }}">
+                <button class="button2" type="submit">View Notes</button>
+            </form>
+        </center>
+
+        <div class="footer">
+            <h3> Connect with me</h3><br>
+            <p align="center">
+                <a href="https://www.linkedin.com/in/agarwal-himanshu" target="_blank"><img alt="LinkedIn" width="40px" src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"></a> &nbsp&nbsp&nbsp
+                <a href="https://www.instagram.com/_._hiimanshu_._" target="_blank"><img alt="Instagram" width="40px" src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"></a> &nbsp&nbsp&nbsp
+                <a href="https://www.facebook.com/profile.php?id=100006757421091" target="_blank"><img alt="Facebook" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"></a> &nbsp&nbsp&nbsp
+                <a href="mailto:himanshuaaagarwal2002@gmail.com" target="_blank"><img alt="Gmail" width="40px" src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png"></a>&nbsp&nbsp&nbsp
+                <a href="https://api.whatsapp.com/send/?phone=%2B919967432086&text&type=phone_number&app_absent=0" target="_blank"><img alt="Whatsapp" width="40px" src="https://cdn-icons-png.flaticon.com/512/5968/5968841.png"></a>
+            </p> 
+        </div>
+    </body>
+    
+</html>
