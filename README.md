@@ -1,5 +1,16 @@
 # Notes-App
 
+A notes app made on Flask is a web application that allows users to create, store, and organize notes online. Flask is a lightweight and flexible Python web framework that enables developers to build web applications quickly and easily. 
+
+With a Flask-based notes app, users can easily
+- add
+- edit
+- delete notes
+- search for specific notes
+
+The app can also include authentication and authorization features to ensure secure access to users' notes.
+
+
 ## 🪪 License
 
 You may use this project freely at your own risk. See [LICENSE](https://choosealicense.com/licenses/mit/).
